@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Jailbreak Repo</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f1ea;
+        --paper: rgba(255, 255, 255, 0.9);
+        --text: #1b1b18;
+        --muted: #5d5d56;
+        --line: rgba(27, 27, 24, 0.12);
+        --accent: #0f766e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 28%),
+          radial-gradient(circle at right 20%, rgba(245, 158, 11, 0.16), transparent 24%),
+          linear-gradient(180deg, #fbf8f1 0%, var(--bg) 100%);
+        font-family: Georgia, "Times New Roman", "PingFang SC", serif;
+      }
+
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 48px 20px 72px;
+      }
+
+      .hero,
+      .panel {
+        backdrop-filter: blur(12px);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 18px 60px rgba(27, 27, 24, 0.08);
+      }
+
+      .hero {
+        padding: 36px 28px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(15, 118, 110, 0.1);
+        color: var(--accent);
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2.2rem, 6vw, 4rem);
+        line-height: 1;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.75;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.95rem;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .hint {
+        margin-top: 18px;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="eyebrow">Jailbreak Source</div>
+        <h1>My Jailbreak Repo</h1>
+        <p>这是你的个人越狱插件源首页。先修改 <code>repo.conf</code>，再把这里的标题、介绍和源地址换成你自己的信息。</p>
+        <p class="hint">Sileo / Zebra / Cydia 添加源时使用你的公开 URL，例如：<code>https://example.com/repo/</code></p>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>添加源</h2>
+          <p>将你的仓库目录部署到公开静态站点后，把源地址添加到包管理器即可。</p>
+        </article>
+
+        <article class="panel">
+          <h2>放置插件</h2>
+          <p>把构建好的 <code>.deb</code> 文件放入 <code>repo/debs/</code>，然后重新生成索引。</p>
+        </article>
+
+        <article class="panel">
+          <h2>介绍页</h2>
+          <p>每个插件建议单独准备一个 HTML 介绍页，放在 <code>repo/depictions/</code>。</p>
+        </article>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>维护流程</h2>
+        <ul>
+          <li>编辑 <code>repo.conf</code> 设置仓库元信息</li>
+          <li>上传或复制新的 <code>.deb</code> 文件到 <code>repo/debs/</code></li>
+          <li>执行 <code>./scripts/build-repo.sh</code> 生成索引</li>
+          <li>把整个 <code>repo/</code> 目录同步到静态托管环境</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
