@@ -1,0 +1,10 @@
+Package: com.biefan.storagesweep
+Name: StorageSweep
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 定期清理各 App 的 Caches 目录,释放存储空间
+Maintainer: biefan
+Author: biefan
+Section: Tweaks
+Depends: firmware (>= 15.0)
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.storagesweep.html

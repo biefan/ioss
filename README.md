@@ -17,8 +17,11 @@ scripts/
   add-package.sh
   build-repo.sh
   new-depiction.sh
+tweaks/           # 插件源码（Theos 工程 / 打包脚本），构建产物放进 repo/debs/
 repo.conf
 ```
+
+插件源码见 [`tweaks/README.md`](tweaks/README.md)。
 
 ## 使用方式
 

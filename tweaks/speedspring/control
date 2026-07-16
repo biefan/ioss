@@ -1,0 +1,10 @@
+Package: com.biefan.speedspring
+Name: SpeedSpring
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 加快 SpringBoard 系统动画速度,操作更跟手
+Maintainer: biefan
+Author: biefan
+Section: Tweaks
+Depends: firmware (>= 15.0), ellekit
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.speedspring.html

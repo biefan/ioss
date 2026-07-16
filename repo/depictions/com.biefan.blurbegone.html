@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BlurBeGone</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f5f7;
+        --card: #ffffff;
+        --text: #111111;
+        --muted: #666666;
+        --line: #e5e5ea;
+        --accent: #007aff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+        background: linear-gradient(180deg, #fafafa 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .hero,
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 18px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(0, 122, 255, 0.1);
+        color: var(--accent);
+        font-size: 13px;
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+      }
+
+      p,
+      li {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .card {
+        padding: 24px;
+        margin-top: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="tag">Jailbreak Tweak</div>
+        <h1>BlurBeGone</h1>
+        <p>关闭控制中心、多任务、文件夹等系统界面的毛玻璃/半透明渲染，降低 GPU 负载，更省电更流畅。</p>
+      </section>
+
+      <section class="card">
+        <h2>功能说明</h2>
+        <ul>
+          <li>Hook 系统的毛玻璃视图，直接跳过特效渲染，不改变界面布局和交互逻辑</li>
+          <li>默认只作用于 SpringBoard 系统界面，不影响第三方 App 的视觉效果</li>
+          <li>低配设备或老机型上，对滑动流畅度和续航提升比较明显</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>使用方法</h2>
+        <ul>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.blurbegone.plist enabled -bool false</code>（关闭，恢复毛玻璃）</li>
+          <li><code>notifyutil -p com.biefan.blurbegone/reload</code>（使配置立即生效）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>兼容信息</h2>
+        <p>包标识：<code>com.biefan.blurbegone</code></p>
+        <p>适配系统：iOS 15.0 及以上（无根越狱，如 Dopamine / roothide）</p>
+        <p>依赖说明：ElleKit</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+Package: com.biefan.blurbegone
+Name: BlurBeGone
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 关闭系统毛玻璃/半透明特效渲染,降低 GPU 负载,省电更流畅
+Maintainer: biefan
+Author: biefan
+Section: Tweaks
+Depends: firmware (>= 15.0), ellekit
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.blurbegone.html

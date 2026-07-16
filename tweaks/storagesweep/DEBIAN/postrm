@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+launchctl unload /var/jb/Library/LaunchDaemons/com.biefan.storagesweep.plist 2>/dev/null || true
+
+exit 0

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PowerGuard</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f5f7;
+        --card: #ffffff;
+        --text: #111111;
+        --muted: #666666;
+        --line: #e5e5ea;
+        --accent: #007aff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+        background: linear-gradient(180deg, #fafafa 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .hero,
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 18px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(0, 122, 255, 0.1);
+        color: var(--accent);
+        font-size: 13px;
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+      }
+
+      p,
+      li {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .card {
+        padding: 24px;
+        margin-top: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="tag">Jailbreak Tweak</div>
+        <h1>PowerGuard</h1>
+        <p>低电量时自动开启系统低电量模式，过热或低电量模式下清理后台 App，减少 CPU/GPU 负载。</p>
+      </section>
+
+      <section class="card">
+        <h2>功能说明</h2>
+        <ul>
+          <li>iOS 不对越狱插件开放 CPU 调频接口，这个插件不做、也做不到直接限制 CPU 最高频率</li>
+          <li>真正的省电手段是自动开关系统自带的「低电量模式」——iOS 官方的 CPU/GPU 降频、后台限制机制，跟你在设置里手动开的是同一个开关，只是自动化了：电量低于阈值且没充电时自动开，充电或电量回升后自动关</li>
+          <li>另外在设备过热（serious/critical）或低电量模式已经开着（不管是不是这个插件开的）时，顺手清理一遍白名单之外的后台 App，5 分钟内最多清理一次，避免频繁打断使用</li>
+          <li>不依赖其他插件，单独安装即可生效；跟 SpeedSpring 搭配使用效果更好（后者过热时会自动把动画倍速收回 1.0x）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>使用方法</h2>
+        <ul>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.powerguard.plist lowBatteryThreshold -int 20</code>（低于 20% 自动开低电量模式，默认值）</li>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.powerguard.plist restoreBatteryThreshold -int 80</code>（充到 80% 或插上充电自动关，默认值）</li>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.powerguard.plist autoLPM -bool false</code>（只保留后台清理，关掉自动低电量模式）</li>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.powerguard.plist whitelist -array "com.your.app"</code></li>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.powerguard.plist enabled -bool false</code>（整体关闭）</li>
+          <li><code>notifyutil -p com.biefan.powerguard/reload</code>（使配置立即生效）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>兼容信息</h2>
+        <p>包标识：<code>com.biefan.powerguard</code></p>
+        <p>适配系统：iOS 15.0 及以上（无根越狱，如 Dopamine / roothide）</p>
+        <p>依赖说明：ElleKit；用到 FrontBoard、LowPowerMode 私有框架，系统大版本升级后如失效需要适配</p>
+      </section>
+    </main>
+  </body>
+</html>

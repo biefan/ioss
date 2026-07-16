@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SpeedSpring</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f5f7;
+        --card: #ffffff;
+        --text: #111111;
+        --muted: #666666;
+        --line: #e5e5ea;
+        --accent: #007aff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+        background: linear-gradient(180deg, #fafafa 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .hero,
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 18px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(0, 122, 255, 0.1);
+        color: var(--accent);
+        font-size: 13px;
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+      }
+
+      p,
+      li {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .card {
+        padding: 24px;
+        margin-top: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="tag">Jailbreak Tweak</div>
+        <h1>SpeedSpring</h1>
+        <p>加快 SpringBoard 系统动画速度，App 启动、切换、开合文件夹更跟手。</p>
+      </section>
+
+      <section class="card">
+        <h2>功能说明</h2>
+        <ul>
+          <li>默认把系统动画倍速调到 1.8x，操作反馈更快</li>
+          <li>速度可在 1.0x - 5.0x 之间自定义，1.0x 即恢复系统默认</li>
+          <li>设备过热（达到 serious/critical）或开启低电量模式时，自动把倍速收回 1.0x，不跟系统的省电意图对着干</li>
+          <li>改配置后无需重启 SpringBoard，执行一条 <code>notifyutil</code> 命令即可热更新</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>使用方法</h2>
+        <ul>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.speedspring.plist speed -float 2.0</code></li>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.speedspring.plist enabled -bool false</code>（关闭）</li>
+          <li><code>notifyutil -p com.biefan.speedspring/reload</code>（使配置立即生效）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>兼容信息</h2>
+        <p>包标识：<code>com.biefan.speedspring</code></p>
+        <p>适配系统：iOS 15.0 及以上（无根越狱，如 Dopamine / roothide）</p>
+        <p>依赖说明：ElleKit</p>
+      </section>
+    </main>
+  </body>
+</html>

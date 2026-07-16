@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StorageSweep</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f5f7;
+        --card: #ffffff;
+        --text: #111111;
+        --muted: #666666;
+        --line: #e5e5ea;
+        --accent: #007aff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+        background: linear-gradient(180deg, #fafafa 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .hero,
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 18px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(0, 122, 255, 0.1);
+        color: var(--accent);
+        font-size: 13px;
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+      }
+
+      p,
+      li {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .card {
+        padding: 24px;
+        margin-top: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="tag">Jailbreak Tweak</div>
+        <h1>StorageSweep</h1>
+        <p>后台定期清理各 App 沙盒内的缓存目录，释放存储空间。</p>
+      </section>
+
+      <section class="card">
+        <h2>功能说明</h2>
+        <ul>
+          <li>通过 LaunchDaemon 每 24 小时触发一次，清理超过 N 天未修改的缓存文件</li>
+          <li>只清理各 App 自己的 <code>Library/Caches</code> 目录，不触碰系统目录、不需要额外权限</li>
+          <li>不依赖 MobileSubstrate/ElleKit，不注入任何进程，纯脚本 + 系统 launchd</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>使用方法</h2>
+        <ul>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.storagesweep.plist olderThanDays -int 3</code></li>
+          <li><code>defaults write /var/mobile/Library/Preferences/com.biefan.storagesweep.plist enabled -bool false</code>（关闭）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>兼容信息</h2>
+        <p>包标识：<code>com.biefan.storagesweep</code></p>
+        <p>适配系统：iOS 15.0 及以上（无根越狱，如 Dopamine / roothide）</p>
+        <p>依赖说明：无（不依赖 ElleKit / mobilesubstrate）</p>
+      </section>
+    </main>
+  </body>
+</html>

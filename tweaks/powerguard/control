@@ -1,0 +1,10 @@
+Package: com.biefan.powerguard
+Name: PowerGuard
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 低电量时自动开启低电量模式,过热/低电量模式下清理后台 App,降低 CPU/GPU 负载
+Maintainer: biefan
+Author: biefan
+Section: Tweaks
+Depends: firmware (>= 15.0), ellekit
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.powerguard.html

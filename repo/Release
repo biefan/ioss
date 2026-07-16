@@ -6,12 +6,12 @@ Codename: ./
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: Personal iOS jailbreak tweak repository
-Date: Wed, 15 Jul 2026 14:31:04 +0000
+Date: Thu, 16 Jul 2026 02:32:02 +0000
 MD5Sum:
- d41d8cd98f00b204e9800998ecf8427e                0 Packages
- 94ad4be68271be788404795d38ddfad8               29 Packages.gz
- 4059d198768f9f8dc9372dc1c54bc3c3               14 Packages.bz2
+ 7b87325ca65eb678f358bc80277c8ab8             2988 Packages
+ bb18f511696eb8b5b428b8c64f5b9f5a             1234 Packages.gz
+ 38791fb038492e7c07763c0a00a3143a             1351 Packages.bz2
 SHA256:
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 Packages
- c43fcaa2380afd53ddc9faefd01ea3f0ce835b6647817b6094d3ac5932b666e6               29 Packages.gz
- d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058               14 Packages.bz2
+ 9a6995f84b71fc2bb9203a31f668e5913e4e4d50e96c0c4bf5bcc5cb23ce7fab             2988 Packages
+ 228a274f44eff5b02ce1d4ae99d65308a8e5b86815234955fe53a47c72edaf04             1234 Packages.gz
+ e7030bc3a3f92957c2cda4956d71f7f884980a786cab3cb76afcc00ae975bd90             1351 Packages.bz2

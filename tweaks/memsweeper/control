@@ -1,0 +1,10 @@
+Package: com.biefan.memsweeper
+Name: MemSweeper
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 系统内存压力告警时,自动清理白名单之外的后台 App 释放内存
+Maintainer: biefan
+Author: biefan
+Section: Tweaks
+Depends: firmware (>= 15.0), ellekit
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.memsweeper.html

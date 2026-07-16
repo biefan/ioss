@@ -1,0 +1,84 @@
+Package: com.biefan.blurbegone
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: biefan
+Installed-Size: 184
+Depends: firmware (>= 15.0), ellekit
+Filename: debs/com.biefan.blurbegone_1.0.0_iphoneos-arm64.deb
+Size: 4056
+MD5sum: 5b87de4fc665ffc1d00381f63ed732ce
+SHA1: 23ad231811c4d0916b90260ca27ec7324545df22
+SHA256: c215feb638e146b495b70ea80347c695d75b64ff64b540a6ff143a1ce423f61d
+Section: Tweaks
+Description: 关闭系统毛玻璃/半透明特效渲染,降低 GPU 负载,省电更流畅
+Author: biefan
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.blurbegone.html
+Name: BlurBeGone
+
+Package: com.biefan.memsweeper
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: biefan
+Installed-Size: 184
+Depends: firmware (>= 15.0), ellekit
+Filename: debs/com.biefan.memsweeper_1.0.0_iphoneos-arm64.deb
+Size: 5770
+MD5sum: bbee3730c47535393aa3cee5e89de14d
+SHA1: 12aa99d4e62da86426f12ea429aa07960e69f0be
+SHA256: b03b7627677c8a2ab01ae50a9aa2698c08e60364e3528115b4fb9e149fec5938
+Section: Tweaks
+Description: 系统内存压力告警时,自动清理白名单之外的后台 App 释放内存
+Author: biefan
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.memsweeper.html
+Name: MemSweeper
+
+Package: com.biefan.powerguard
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: biefan
+Installed-Size: 184
+Depends: firmware (>= 15.0), ellekit
+Filename: debs/com.biefan.powerguard_1.0.0_iphoneos-arm64.deb
+Size: 7416
+MD5sum: d3b21480b185806a0dc764ffd2a1a62b
+SHA1: 5d74164884aab7ffe2c76042000a9aa133f7e557
+SHA256: 9ecd000c019b3a5fd6c297b326c07d4b9d229032ccbd1e1eac8fa357db42b8c1
+Section: Tweaks
+Description: 低电量时自动开启低电量模式,过热/低电量模式下清理后台 App,降低 CPU/GPU 负载
+Author: biefan
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.powerguard.html
+Name: PowerGuard
+
+Package: com.biefan.speedspring
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: biefan
+Installed-Size: 184
+Depends: firmware (>= 15.0), ellekit
+Filename: debs/com.biefan.speedspring_1.0.0_iphoneos-arm64.deb
+Size: 6050
+MD5sum: 455e8bfdc9b79a7d5028a612c63bbce3
+SHA1: 289f88dbc17945bc324df7f5b0e8d6ea1621c9ee
+SHA256: d6f58f8816273be498175e02301122325c0d40ec6b46a5269110bb00e11bda33
+Section: Tweaks
+Description: 加快 SpringBoard 系统动画速度,操作更跟手
+Author: biefan
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.speedspring.html
+Name: SpeedSpring
+
+Package: com.biefan.storagesweep
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: biefan
+Depends: firmware (>= 15.0)
+Filename: debs/com.biefan.storagesweep_1.0.0_iphoneos-arm64.deb
+Size: 2540
+MD5sum: 995d07c3309429ff91c77812cb70e15e
+SHA1: d9ddbb2b1e54c31a3aee1a6d4a69fe1ffb7f677b
+SHA256: 1d54521f84212d4d43b29f84e8f89ffb89b6580f2247f300560b5236238e5058
+Section: Tweaks
+Description: 定期清理各 App 的 Caches 目录,释放存储空间
+Author: biefan
+Depiction: https://biefan.github.io/ioss/depictions/com.biefan.storagesweep.html
+Name: StorageSweep
+

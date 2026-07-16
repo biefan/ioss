@@ -1,0 +1,3 @@
+tweaks/*/.theos/
+tweaks/*/packages/
+tweaks/storagesweep/*.deb
